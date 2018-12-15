@@ -9,7 +9,7 @@ class Application
       item = Item.all.find { |i| i.name == item_name }
       if item.nil?
         resp.write "Item not found"
-        rep.status = 400
+        resp.status = 400
       else
         resp.write item.price
       end
